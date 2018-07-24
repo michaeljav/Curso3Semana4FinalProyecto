@@ -29,6 +29,10 @@ public class CreateMenuOpctions extends AppCompatActivity {
             case  R.id.mContact:
                 Toast.makeText(getApplicationContext(),"contactos",Toast.LENGTH_SHORT).show();
                 break;
+
+            case R.id.mactionView:
+                Toast.makeText(getApplicationContext(),"Refresh",Toast.LENGTH_SHORT).show();
+                break;
         }
 
         return super.onOptionsItemSelected(item);
