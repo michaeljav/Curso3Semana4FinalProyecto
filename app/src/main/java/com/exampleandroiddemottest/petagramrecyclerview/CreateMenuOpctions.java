@@ -9,29 +9,28 @@ import android.widget.Toast;
 
 public class CreateMenuOpctions extends AppCompatActivity {
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//
-//       getMenuInflater().inflate(R.menu.menu_opciones,menu);
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//
-//        switch (item.getItemId()){
-//
-//            case R.id.mAbout:
-//                Toast.makeText(getApplicationContext(),"abourt",Toast.LENGTH_SHORT).show();
-//                break;
-//
-//
-//            case  R.id.mContact:
-//                Toast.makeText(getApplicationContext(),"contactos",Toast.LENGTH_SHORT).show();
-//                break;
-//        }
-//
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+       getMenuInflater().inflate(R.menu.menu_opciones,menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+
+            case R.id.mAbout:
+                Toast.makeText(getApplicationContext(),"abourt",Toast.LENGTH_SHORT).show();
+                break;
+
+            case  R.id.mContact:
+                Toast.makeText(getApplicationContext(),"contactos",Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
