@@ -27,14 +27,14 @@ public class MainActivity extends CreateMenuOpctions {
         Toolbar toolbar = findViewById(R.id.miActionBar);
         setSupportActionBar(toolbar);
 
+
+
         SegundaPantalla = findViewById(R.id.SegundaPantalla);
 
         SegundaPantalla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"click",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this,DetallePets.class);
-                startActivity(intent);
+
             }
         });
 
@@ -49,6 +49,7 @@ public class MainActivity extends CreateMenuOpctions {
         llenarRecycler llenarRecycler = new llenarRecycler();
        pets=llenarRecycler.inicializarListadePets();
         llenarRecycler.inicializarAdactador(pets,this,recyclerViewlistaPets);
+
 
 
 

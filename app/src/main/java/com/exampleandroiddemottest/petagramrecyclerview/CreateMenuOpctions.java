@@ -1,5 +1,6 @@
 package com.exampleandroiddemottest.petagramrecyclerview;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,19 +20,30 @@ public class CreateMenuOpctions extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
+        Intent intent;
         switch (item.getItemId()){
 
             case R.id.mAbout:
-                Toast.makeText(getApplicationContext(),"abourt",Toast.LENGTH_SHORT).show();
+                 intent = new Intent(this,Aboutme.class);
+                startActivity(intent);
+//                Toast.makeText(getApplicationContext(),"abourt",Toast.LENGTH_SHORT).show();
                 break;
 
             case  R.id.mContact:
-                Toast.makeText(getApplicationContext(),"contactos",Toast.LENGTH_SHORT).show();
+                 intent = new Intent(this,Contact.class);
+                startActivity(intent);
+                //   Toast.makeText(getApplicationContext(),"contactos",Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.mactionView:
-                Toast.makeText(getApplicationContext(),"Refresh",Toast.LENGTH_SHORT).show();
+
+               // Toast.makeText(getApplicationContext(),"click",Toast.LENGTH_SHORT).show();
+                 intent = new Intent(getApplicationContext(),DetallePets.class);
+                startActivity(intent);
+
+              //  Toast.makeText(getApplicationContext(),"Refresh",Toast.LENGTH_SHORT).show();
+
+
                 break;
         }
 
