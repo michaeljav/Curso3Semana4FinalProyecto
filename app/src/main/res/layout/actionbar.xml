@@ -11,6 +11,7 @@ android:background="@color/colorPrimary"
 android:elevation="@dimen/dime_ActionBar"
 android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_scrollFlags="scroll|enterAlways"
 
     >
 <android.support.constraint.ConstraintLayout

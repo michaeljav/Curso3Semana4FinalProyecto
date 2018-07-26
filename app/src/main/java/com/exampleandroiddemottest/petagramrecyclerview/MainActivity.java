@@ -1,58 +1,63 @@
 package com.exampleandroiddemottest.petagramrecyclerview;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
+
+import com.exampleandroiddemottest.petagramrecyclerview.adapter.PageAdapter;
+import com.exampleandroiddemottest.petagramrecyclerview.fragment.Fragment_DetallePets;
+import com.exampleandroiddemottest.petagramrecyclerview.fragment.RecyclerViewFragment;
+import com.exampleandroiddemottest.petagramrecyclerview.pojo.Pets;
 
 import java.util.ArrayList;
 
 public class MainActivity extends CreateMenuOpctions {
 
-    ArrayList<Pets> pets;
-    private ImageButton SegundaPantalla;
-    private RecyclerView recyclerViewlistaPets;
+
+    Toolbar toolbar;
+    TabLayout tabLayout;
+    ViewPager viewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.miActionBar);
+
+         toolbar = findViewById(R.id.miActionBar);
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
         setSupportActionBar(toolbar);
 
+        setUpViewPager();
+        if (toolbar != null){
+            setSupportActionBar(toolbar);
+        }
 
+    }
 
-        SegundaPantalla = findViewById(R.id.SegundaPantalla);
+    //lista de fragment a mostrar
+    private ArrayList<Fragment> agregarFragments(){
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        fragments.add(new RecyclerViewFragment());
+        fragments.add(new Fragment_DetallePets());
+        return  fragments;
 
-        SegundaPantalla.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    }
 
-            }
-        });
+    //add list gragment to adapter
+    private  void setUpViewPager(){
 
-        recyclerViewlistaPets = findViewById(R.id.rvPets);
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),agregarFragments()));
+        tabLayout.setupWithViewPager(viewPager);
 
-        //Forma en mostrar  el en el recycler;
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerViewlistaPets.setLayoutManager(llm);
-
-
-        llenarRecycler llenarRecycler = new llenarRecycler();
-       pets=llenarRecycler.inicializarListadePets();
-        llenarRecycler.inicializarAdactador(pets,this,recyclerViewlistaPets);
-
-
-
-
+      tabLayout.getTabAt(0).setIcon(R.drawable.ic_individual);
+      tabLayout.getTabAt(1).setIcon(R.drawable.ic_details);
     }
 
 

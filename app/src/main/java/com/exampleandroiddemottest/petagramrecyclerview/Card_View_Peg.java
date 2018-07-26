@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.exampleandroiddemottest.petagramrecyclerview.pojo.Pets;
+
 import java.util.ArrayList;
 
 public class Card_View_Peg extends AppCompatActivity {

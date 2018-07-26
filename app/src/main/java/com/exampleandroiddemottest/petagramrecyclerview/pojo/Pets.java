@@ -1,4 +1,4 @@
-package com.exampleandroiddemottest.petagramrecyclerview;
+package com.exampleandroiddemottest.petagramrecyclerview.pojo;
 
 public class Pets {
 

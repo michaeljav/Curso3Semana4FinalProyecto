@@ -3,6 +3,9 @@ package com.exampleandroiddemottest.petagramrecyclerview;
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 
+import com.exampleandroiddemottest.petagramrecyclerview.adapter.PetsAdapter;
+import com.exampleandroiddemottest.petagramrecyclerview.pojo.Pets;
+
 import java.util.ArrayList;
 
 public class   llenarRecycler {
