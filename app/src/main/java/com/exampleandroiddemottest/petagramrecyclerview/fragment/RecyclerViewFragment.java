@@ -37,7 +37,7 @@ public class RecyclerViewFragment  extends Fragment{
         llenarRecycler llenarRecycler = new llenarRecycler();
         pets=llenarRecycler.inicializarListadePets();
         llenarRecycler.inicializarAdactador(pets,getActivity(),rvPets);
-
+//
 
 
         return v;
