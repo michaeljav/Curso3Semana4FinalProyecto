@@ -25,7 +25,7 @@ public class SimpleMail {
     private static final String SMTP_HOST_NAME = "smtp.gmail.com"; //can be your host server smtp@yourdomain.com
     // private static final String SMTP_HOST_NAME = "telnet mail.gmail.com 110"; //can be your host server smtp@yourdomain.com
      private static final String SMTP_AUTH_USER = "michaeljaviermota@gmail.com"; //your login username/email
-    private static final String SMTP_AUTH_PWD  = "micharlisamary712345"; //password/secret
+    private static final String SMTP_AUTH_PWD  = "clavequesubir"; //password/secret
 
     private static Message message;
 
